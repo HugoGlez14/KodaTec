@@ -76,31 +76,32 @@
             <h4 class="text-secondary mb-3">Registro</h4>
             <h1 class="display-4 m-0">Registro <span class="text-primary">Usuario</span></h1>
         </div>
+        <div id="message" style="z-index: 100; position: fixed; top: 50px; left: 50%; transform: translateX(-50%);"></div>
         <div class="row justify-content-center">
             <div class="col-12 col-sm-8 mb-5">
                 <div class="contact-form">
                     <div id="success"></div>
                     <form name="sentMessage" id="contactForm" novalidate="novalidate">
                         <div class="control-group center">
-                            <input type="text" class="form-control p-4" id="name" placeholder="Nombre" required="required" data-validation-required-message="Ingresa tu nombre ⚠" />
+                            <input type="text" class="form-control p-4" id="name" placeholder="Nombre" required pattern="[a-zA-Z\s']+" data-validation-required-message="Ingresa tu nombre ⚠"/>
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="text" class="form-control p-4" id="lastname" placeholder="Apellido" required="required" data-validation-required-message="Ingresa tu apellido ⚠" />
+                            <input type="text" class="form-control p-4" id="lastname" placeholder="Apellido" required pattern="[a-zA-Z\s']+" data-validation-required-message="Ingresa tu apellido ⚠"/>
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="email" class="form-control p-4" id="email" placeholder="Correo" required="required" data-validation-required-message="Ingresa tu correo ⚠" />
+                            <input type="email" class="form-control p-4" id="email" placeholder="Correo" required="required" data-validation-required-message="Ingresa tu correo ⚠"/>
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="password" class="form-control p-4" id="pass" placeholder="Contraseña" required="required" data-validation-required-message="Ingresa tu contraseña ⚠" />
+                            <input type="password" class="form-control p-4" id="password" placeholder="Contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" data-validation-required-message="Ingresa una contraseña segura ⚠"/>
                             <p class="help-block text-danger"></p>
                         </div>
                         
                         <div>
                             <center>
-                            <button class="btn btn-primary py-3 px-5" type="submit" id="sendMessageButton">Registrar</button>
+                                <button class="btn btn-primary py-3 px-5" type="button" onclick="enviarRegistro()" id="sendMessageButton">Registrar</button>
                         </center>
                         </div>
                     </form>

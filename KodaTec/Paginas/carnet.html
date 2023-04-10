@@ -11,7 +11,8 @@
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -35,183 +36,191 @@
             </a>
         </div>
     </div>
-</div>
-<!-- Topbar End -->
+    </div>
+    <!-- Topbar End -->
 
 
-<!-- Navbar Start -->
-<div class="container-fluid p-0">
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
-        <a href="" class="navbar-brand d-block d-lg-none">
-            <h1 class="m-0 display-5 text-capitalize font-italic text-white"><span class="text-primary">Koda</span>Tec</h1>
-        </a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-            <div class="navbar-nav mr-auto py-0">
-                <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                <a href="about.html" class="nav-item nav-link">Acerca de nosotros</a>
-                <a href="service.html" class="nav-item nav-link">Servicios</a>
-                <a href="price.html" class="nav-item nav-link">Tienda</a>
-                <a href="booking.html" class="nav-item nav-link">Veterinarias </a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Paginas</a>
-                    <div class="dropdown-menu rounded-0 m-0">
-                        <a href="blog.html" class="dropdown-item">Blog Ayuda</a>
-                        <a href="single.html" class="dropdown-item">Blog Consejos</a>
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-capitalize font-italic text-white"><span
+                        class="text-primary">Koda</span>Tec</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                    <a href="about.html" class="nav-item nav-link">Acerca de nosotros</a>
+                    <a href="service.html" class="nav-item nav-link">Servicios</a>
+                    <a href="price.html" class="nav-item nav-link">Tienda</a>
+                    <a href="booking.html" class="nav-item nav-link">Veterinarias </a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Paginas</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="blog.html" class="dropdown-item">Blog Ayuda</a>
+                            <a href="single.html" class="dropdown-item">Blog Consejos</a>
+                        </div>
                     </div>
+                    <a href="contact.html" class="nav-item nav-link">Contacto</a>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                <a href="../Paginas/login.html" class="btn btn-lg btn-primary px-3 d-none d-lg-block">Login</a>
             </div>
-            <a href="../Paginas/login.html" class="btn btn-lg btn-primary px-3 d-none d-lg-block">Login</a>
-        </div>
-    </nav>
-</div>
-<!-- Navbar fin-->
+        </nav>
+    </div>
+    <!-- Navbar fin-->
 
     <!-- Contact Start -->
     <div class="container-fluid pt-5">
         <div class="d-flex flex-column text-center mb-5 pt-5">
-            <h4 class="text-secondary mb-3">Creacion de Carnet para tu mascota</h4>
+            <h4 class="text-secondary mb-3">Creación de Carnet para tu mascota</h4>
             <h1 class="display-4 m-0">Carnet <span class="text-primary">Koda Tec</span></h1>
         </div>
+        <div id="message" style="z-index: 100; position: fixed; top: 50px; left: 50%; transform: translateX(-50%);"></div>
         <div class="row justify-content-center">
             <div class="col-12 col-sm-8 mb-5">
                 <div class="contact-form">
                     <div id="success"></div>
                     <form name="sentMessage" id="contactForm" novalidate="novalidate">
                         <div class="control-group center">
-                            <input type="text" class="form-control p-4" id="name" placeholder="Nombre mascota" required="required" data-validation-required-message="Ingresa su nombre ⚠" />
+                            <input type="text" class="form-control p-4" id="petName" placeholder="Nombre mascota" required="required" data-validation-required-message="Ingresa el nombre de tu mascota ⚠" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="text" class="form-control p-4" id="raza" placeholder="Raza" required="required" data-validation-required-message="Ingresa tu raza ⚠" />
+                            <input type="text" class="form-control p-4" id="petBreed" placeholder="Raza" required="required" data-validation-required-message="Ingresa la raza de tu mascota ⚠" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="text" class="form-control p-4" id="sx" placeholder="Sexo" required="required" data-validation-required-message="Ingresa su sexo ⚠" />
+                            <label for="sex">Sexo</label>
+                            <select id="sex" class="form-control" style="height:3rem;" required="required" data-validation-required-message="Selecciona el sexo de tu mascota ⚠">
+                                <option value="Macho">Macho</option>
+                                <option value="Hembra">Hembra</option>
+                            </select>
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="text" class="form-control p-4" id="dueno" placeholder="Adulto Responsable" required="required" data-validation-required-message="Ingresa adulto responsable ⚠" />
+                            <input type="text" class="form-control pt-2" id="species" name="species" style="height:3rem;" placeholder="Especie"
+                                required="required" data-validation-required-message="Ingresa su especie ⚠" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="number" class="form-control pt-2" id="numeroI" placeholder="ID" required="required" data-validation-required-message="Ingresa su ID ⚠" />
+                            <label for="birthDate">Fecha de nacimiento</label>
+                            <input type="date" class="form-control pt-2" id="birthDate" style="height:3rem;" placeholder="Fecha de Nacimiento"
+                                required="required"
+                                data-validation-required-message="Ingresa la fecha de nacimiento de tu mascota ⚠" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="text" class="form-control pt-2" id="especie" placeholder="Especie" required="required" data-validation-required-message="Ingresa su especie ⚠" />
+                            <label for="photoPet">Foto de la mascota</label>
+                            <input type="file" class="form-control pt-2" id="photoPet" style="height:3rem;" placeholder="Foto" required="required"
+                                data-validation-required-message="Ingresa su foto ⚠" />
                             <p class="help-block text-danger"></p>
                         </div>
-                        <div class="control-group">
-                            <a href="">Fecha de nacimiento</a>
-                            <input type="date" class="form-control pt-2" id="fechaN" placeholder="Fecha de Nacimiento" required="required" data-validation-required-message="Ingresa su fecha de nacimiento ⚠" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <a href="">Foto de la mascota</a>
-                            <input type="file" class="form-control pt-2" id="doc" placeholder="Foto" required="required" data-validation-required-message="Ingresa su foto ⚠" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="text" class="form-control pt-2" id="nacionalidad" placeholder="Nacionalidad" required="required" data-validation-required-message="Ingresa su nacionalidad ⚠" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        
+
                         <div>
                             <center>
-                            <button class="btn btn-primary py-3 px-5" type="submit" id="sendMessageButton">Generar Carnet</button>
-                        </center>
+                                <button class="btn btn-primary py-3 px-5" type="button" onclick="enviarCarnet()" id="sendCarnetButton">Generar
+                                    Carnet</button>
+                            </center>
                         </div>
                     </form>
                 </div>
             </div>
-            
+
         </div>
     </div>
     <!-- Contact End -->
 
 
- <!-- Footer Start -->
- <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
-    <div class="row pt-5">
-        <div class="col-lg-4 col-md-12 mb-5">
-            <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">Koda</span>tec</h1>
-            <p class="m-0"> </p>
-        </div>
-        <div class="col-lg-8 col-md-12">
-            <div class="row">
-                <div class="col-md-4 mb-5">
-                    <h5 class="text-primary mb-4">Contactanos</h5>
-                    <p><i class="fa fa-map-marker-alt mr-2"></i>Universidad Tecnologica de Nezahualcoyolt</p>
-                    <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope mr-2"></i>kodatec@gmail.com</p>
-                    <div class="d-flex justify-content-start mt-4">
-                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://www.instagram.com/koda_tec/?igshid=ZDdkNTZiNTM%3D"><i class="fab fa-instagram"></i></a>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-4 col-md-12 mb-5">
+                <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">Koda</span>tec</h1>
+                <p class="m-0"> </p>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Contactanos</h5>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>Universidad Tecnologica de Nezahualcoyolt</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                        <p><i class="fa fa-envelope mr-2"></i>kodatec@gmail.com</p>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
+                                style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
+                                style="width: 36px; height: 36px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
+                                style="width: 36px; height: 36px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
+                                style="width: 36px; height: 36px;"
+                                href="https://www.instagram.com/koda_tec/?igshid=ZDdkNTZiNTM%3D"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <h5 class="text-primary mb-4">Enlaces</h5>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Acerca de nosotros</a>
-                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Nuestros cervicios</a>
-                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
-                        <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contactanos</a>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Enlaces</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Acerca de
+                                nosotros</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Nuestros
+                                cervicios</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                            <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contactanos</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <h5 class="text-primary mb-4">Envianos un correo</h5>
-                    <form action="">
-                        <div class="form-group">
-                            <input type="text" class="form-control border-0" placeholder="Nombre" required="required" />
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control border-0" placeholder="Correo" required="required" />
-                        </div>
-                        <div>
-                            <button class="btn btn-lg btn-primary btn-block border-0" type="submit">Mandar Ahora</button>
-                        </div>
-                    </form>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Envianos un correo</h5>
+                        <form action="">
+                            <div class="form-group">
+                                <input type="text" class="form-control border-0" placeholder="Nombre"
+                                    required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control border-0" placeholder="Correo"
+                                    required="required" />
+                            </div>
+                            <div>
+                                <button class="btn btn-lg btn-primary btn-block border-0" type="submit">Mandar
+                                    Ahora</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="container-fluid text-white py-4 px-sm-3 px-md-5" style="background: #111111;">
-    <div class="row">
-        <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-            <p class="m-0 text-white">
-                &copy; <a class="text-white font-weight-bold" href="#">KodaTec</a>. Todos los derechos resevados.
-                <a class="text-white font-weight-bold" href="">Equipo de desarrollo</a>
-            </p>
-        </div>
-        <div class="col-md-6 text-center text-md-right">
-            <ul class="nav d-inline-flex">
-                <li class="nav-item">
-                    <a class="nav-link text-white py-0" href="#">Hugo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white py-0" href="#">Jessica</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white py-0" href="#">Michell</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white py-0" href="#">Ricardo</a>
-                </li>
-            </ul>
+    <div class="container-fluid text-white py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">
+                    &copy; <a class="text-white font-weight-bold" href="#">KodaTec</a>. Todos los derechos resevados.
+                    <a class="text-white font-weight-bold" href="">Equipo de desarrollo</a>
+                </p>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <ul class="nav d-inline-flex">
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Hugo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Jessica</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Michell</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Ricardo</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
-<!-- Footer End -->
-
-
+    <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
@@ -232,6 +241,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
 
+    <script src="./js/funcionality.js"></script>
+</body>
 </html>

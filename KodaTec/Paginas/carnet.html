@@ -78,63 +78,50 @@
             <h4 class="text-secondary mb-3">Creación de Carnet para tu mascota</h4>
             <h1 class="display-4 m-0">Carnet <span class="text-primary">Koda Tec</span></h1>
         </div>
+        <div id="message" style="z-index: 100; position: fixed; top: 50px; left: 50%; transform: translateX(-50%);"></div>
         <div class="row justify-content-center">
             <div class="col-12 col-sm-8 mb-5">
                 <div class="contact-form">
                     <div id="success"></div>
                     <form name="sentMessage" id="contactForm" novalidate="novalidate">
                         <div class="control-group center">
-                            <input type="text" class="form-control p-4" id="name" placeholder="Nombre mascota"
-                                required="required" data-validation-required-message="Ingresa su nombre ⚠" />
+                            <input type="text" class="form-control p-4" id="petName" placeholder="Nombre mascota" required="required" data-validation-required-message="Ingresa el nombre de tu mascota ⚠" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="text" class="form-control p-4" id="raza" placeholder="Raza" required="required"
-                                data-validation-required-message="Ingresa tu raza ⚠" />
+                            <input type="text" class="form-control p-4" id="petBreed" placeholder="Raza" required="required" data-validation-required-message="Ingresa la raza de tu mascota ⚠" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="text" class="form-control p-4" id="sx" placeholder="Sexo" required="required"
-                                data-validation-required-message="Ingresa su sexo ⚠" />
+                            <label for="sex">Sexo</label>
+                            <select id="sex" class="form-control" style="height:3rem;" required="required" data-validation-required-message="Selecciona el sexo de tu mascota ⚠">
+                                <option value="Macho">Macho</option>
+                                <option value="Hembra">Hembra</option>
+                            </select>
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="text" class="form-control p-4" id="dueno" placeholder="Adulto Responsable"
-                                required="required" data-validation-required-message="Ingresa adulto responsable ⚠" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="number" class="form-control pt-2" id="numeroI" placeholder="ID"
-                                required="required" data-validation-required-message="Ingresa su ID ⚠" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="text" class="form-control pt-2" id="especie" placeholder="Especie"
+                            <input type="text" class="form-control pt-2" id="species" name="species" style="height:3rem;" placeholder="Especie"
                                 required="required" data-validation-required-message="Ingresa su especie ⚠" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <a href="">Fecha de nacimiento</a>
-                            <input type="date" class="form-control pt-2" id="fechaN" placeholder="Fecha de Nacimiento"
+                            <label for="birthDate">Fecha de nacimiento</label>
+                            <input type="date" class="form-control pt-2" id="birthDate" style="height:3rem;" placeholder="Fecha de Nacimiento"
                                 required="required"
-                                data-validation-required-message="Ingresa su fecha de nacimiento ⚠" />
+                                data-validation-required-message="Ingresa la fecha de nacimiento de tu mascota ⚠" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <a href="">Foto de la mascota</a>
-                            <input type="file" class="form-control pt-2" id="doc" placeholder="Foto" required="required"
+                            <label for="photoPet">Foto de la mascota</label>
+                            <input type="file" class="form-control pt-2" id="photoPet" style="height:3rem;" placeholder="Foto" required="required"
                                 data-validation-required-message="Ingresa su foto ⚠" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="text" class="form-control pt-2" id="nacionalidad" placeholder="Nacionalidad"
-                                required="required" data-validation-required-message="Ingresa su nacionalidad ⚠" />
                             <p class="help-block text-danger"></p>
                         </div>
 
                         <div>
                             <center>
-                                <button class="btn btn-primary py-3 px-5" type="submit" id="sendMessageButton">Generar
+                                <button class="btn btn-primary py-3 px-5" type="button" onclick="enviarCarnet()" id="sendCarnetButton">Generar
                                     Carnet</button>
                             </center>
                         </div>
@@ -254,5 +241,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script src="./js/funcionality.js"></script>
 </body>
 </html>

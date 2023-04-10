@@ -74,7 +74,7 @@
     <div class="container-fluid pt-5">
         <div class="d-flex flex-column text-center mb-5 pt-5">
             <h4 class="text-secondary mb-3">Login</h4>
-            <h1 class="display-4 m-0">Inicio de Sesion <span class="text-primary">Usuario</span></h1>
+            <h1 class="display-4 m-0">Inicio de Sesión <span class="text-primary">Usuario</span></h1>
             <center>
                 <a href="../Paginas/admin.html"><img src="../Paginas/img/koda1.png" width="50px" height="50px"></a>
         </center>
@@ -85,11 +85,11 @@
                     <div id="success"></div>
                     <form name="sentMessage" id="contactForm" novalidate="novalidate">
                         <div class="control-group">
-                            <input type="email" class="form-control p-4" id="email" placeholder="Correo" required="required" data-validation-required-message="Ingresa tu correo" />
+                            <input type="email" class="form-control p-4" id="email" placeholder="Correo" required="required" data-validation-required-message="Ingresa tu correo" min="10" max="250" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="password" class="form-control p-4" id="pass" placeholder="Contraseña" required="required" data-validation-required-message="Please enter a subject" />
+                            <input type="password" class="form-control p-4" id="pass" placeholder="Contraseña" required="required" data-validation-required-message="Please enter a subject" min="10" max="250" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <center>
@@ -150,10 +150,10 @@
                     <h5 class="text-primary mb-4">Envianos un correo</h5>
                     <form action="">
                         <div class="form-group">
-                            <input type="text" class="form-control border-0" placeholder="Nombre" required="required" />
+                            <input type="text" class="form-control border-0" placeholder="Nombre" required="required" min="10" max="250"/>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control border-0" placeholder="Correo" required="required" />
+                            <input type="email" class="form-control border-0" placeholder="Correo" required="required" min="10" max="250" />
                         </div>
                         <div>
                             <button class="btn btn-lg btn-primary btn-block border-0" type="submit">Mandar Ahora</button>
